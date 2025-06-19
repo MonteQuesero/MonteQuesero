@@ -1,0 +1,129 @@
+:root {
+  --color-principal: #000000;
+  --color-secundario: #8b5e3c;
+  --color-claro: #ffffff;
+  --color-oscuro: #cf9a6c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--color-principal);
+  color: var(--color-oscuro);
+}
+
+/* Flip Card */
+.card-container {
+  perspective: 1000px;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face front {
+  z-index: 2;
+}
+
+.face.back {
+  transform: rotateY(180deg);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+header {
+  background-color: var(--color-secundario);
+  padding: 5px 20px;
+  text-align: center;
+  color: var(--color-claro);
+}
+
+nav {
+  background-color: #d9b38c;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
+nav li a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 500;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--color-claro);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: var(--color-secundario);
+  color: var(--color-claro);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+}

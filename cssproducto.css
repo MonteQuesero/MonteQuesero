@@ -1,0 +1,112 @@
+/* Tipografía base */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #000000, #000);
+  color: #fff;
+}
+
+/* Encabezado */
+header {
+  background-color: #000000;
+  text-align: center;
+  padding: 40px 30px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #cf9a6c;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #cfa57f;
+  margin-top: 0.5rem;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+/* Aviso */
+.aviso {
+  background-color: #0f0f0f;
+  border-left: 6px solid #8b5e3c;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(212, 163, 115, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.aviso:hover {
+  transform: translateY(-5px);
+}
+
+.aviso h2 {
+  font-size: 1.8rem;
+  color: #cf9a6c;
+  margin-bottom: 1rem;
+}
+
+.aviso ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aviso li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Imágenes */
+.img-precio {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+}
+
+/* Animación */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar {
+  animation: fadeSlide 1s ease forwards;
+  opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .aviso {
+    padding: 1.2rem;
+  }
+
+  .aviso h2 {
+    font-size: 1.5rem;
+  }
+}

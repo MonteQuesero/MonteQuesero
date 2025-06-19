@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.form-container {
+  background: #1f1f1f;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #cf9a6c;
+  font-family: 'Playfair Display', serif;
+
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #ccc;
+  font-family: 'Playfair Display', serif;
+}
+
+.input-group input {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2d2d2d;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #cf9a6c;
+  background: #3a3a3a;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #cf9a6c;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Playfair Display', serif;
+
+}
+
+button:hover {
+  background: #8b5e3c;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-group select {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2d2d2d;
+  color: #fff;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+.input-group select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00ffd5;
+  background: #3a3a3a;
+}
